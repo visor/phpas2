@@ -569,7 +569,7 @@ class Management implements LoggerAwareInterface
         ];
 
         // TODO: refactory
-        if (! $isSigned) {
+        if (!$isSigned || !$shouldSign) {
             $reportHeaders['Mime-Version'] = '1.0';
             $reportHeaders += $mdnHeaders;
         }
